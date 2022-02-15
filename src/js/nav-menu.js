@@ -2,7 +2,6 @@ const hamburgerMenuBtn = document.querySelector(".nav-menu");
 const closeHamburgerMenuBtn = document.querySelector(".close-nav-menu");
 const navMenu = document.querySelector(".sidebar");
 const overlayBg = document.querySelector(".overlay-bg");
-// const navbar = document.querySelector(".navbar");
 
 hamburgerMenuBtn.addEventListener("click", function() {
     navMenu.classList.add("show");
