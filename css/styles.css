@@ -1,0 +1,308 @@
+body {
+    background-color: var(--white-color);
+    /* transition: background-color 0.5s ease; */
+}
+
+/* ---------------------------------------> NavBar <--------------------------------------- */
+.navbar {
+    padding: 1.5rem;
+    background-color: var(--white-color);
+    /* transition: background-color 0.5s ease; */
+    align-items: center;
+}
+
+#nav-logo {
+    margin-left: 1.5rem;
+    width: 20rem;
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+
+.nav-items {
+    font-size: 1.8rem;
+}
+
+.navigation {
+    flex-grow: 1;
+}
+
+.searchbar {
+    flex-grow: 1;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border: 2px solid var(--hover-color);
+    margin: 0 7rem;
+    align-items: center;
+}
+
+.input-search {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+}
+
+.searchbar .search-icon {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.input-search:focus {
+    border: none;
+}
+
+.nav-icons .nav-menu {
+    display: none;
+}
+
+.nav-items a {
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+.nav-items li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px var(--primary-color);
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+.nav-items li:hover:after {
+    transform: scaleX(0.75);
+}
+
+.nav-icons {
+    font-size: 1.6rem;
+    column-gap: 3rem;
+    margin: 0 3rem;
+}
+
+.nav-icon-item {
+    color: var(--content-lighter-text-color);
+    cursor: pointer;
+}
+
+.nav-icon-item i {
+    margin-bottom: 0.4rem;
+}
+
+.nav-icon-item:hover {
+    color: var(--primary-color);
+    transition: color 250ms ease-in-out;
+}
+
+.nav-icon-item p:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px var(--primary-color);
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+.nav-icon-item:hover p:after {
+    transform: scaleX(0.9);
+}
+
+/* ----------------------------------------> Scrollbar <------------------------------------------ */
+::-webkit-scrollbar {
+    height: 2px;
+    width: 3px;
+}
+   
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color); 
+    border-radius: 0.625rem;
+}
+
+/* ---------------------------------------> Main Section <--------------------------------------- */
+.main-container {
+    width: 100%;
+}
+
+/* -----------------------------------------> Sidebar <------------------------------------------- */
+.sidebar {
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.overlay {
+    background-color: var(--overlay-color);
+}
+
+.overlay-bg {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: var(--white-color);
+    transition: background-color 0.4s ease;
+}
+
+.sidebar-nav {
+    align-items: flex-start;
+    padding: 0.5rem 0;
+    margin-left: 2rem;
+}
+
+.sidebar .sidebar-item-actions {
+    display: none;
+}
+
+.sidebar-heading {
+    margin: 1.3rem;
+    color: var(--primary-color);
+    justify-content: space-between;
+    width: 90%;
+}
+
+.sidebar-item {
+    width: 80%;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    color: var(--default-color);
+    column-gap: 1rem;
+}
+
+.divide-nav-items {
+    width: 90%;
+    margin: 0.3rem 0.5rem;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.sidebar-item:hover {
+    background-color: var(--hover-color);
+}
+
+.sidebar-item:hover .sidebar-item-txt, .sidebar-item:hover .sidebar-icon {
+    color: var(--primary-color);
+}
+
+/* --------------------------------------> Footer <------------------------------------------- */
+.footer-container {
+    background-color: var(--default-color);
+    padding: 1rem;
+}
+
+.footer-header {
+    color: var(--lynx-white);
+    font-size: 2.2rem;
+    margin-top: 1rem;
+}
+
+.footer-header span {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    column-gap: 2rem;
+    padding: 1rem;
+}
+
+.footer-social-item {
+    display: inline-block;
+}
+
+.footer-icon {
+    color: var(--lynx-white);
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+
+.copyright {
+    font-size: 1.6rem;
+    color: var(--lynx-white);
+}
+
+.footer-icon:hover {
+    color: var(--primary-color);
+}
+
+/* -----------------------------------------> Responsive CSS <------------------------------------ */
+@media only screen and (max-width: 700px) {
+    .nav-icons .nav-menu {
+        font-size: 1.8rem;
+        display: block;
+        color: var(--content-lighter-text-color);
+        padding: 0 1rem;
+    }
+
+    .nav-icons .nav-menu:hover {
+        color: var(--primary-color);
+    }
+
+    .close-nav-menu {
+        font-size: 1.8rem;
+        display: block;
+        color: var(--primary-color);
+        padding: 0 1rem;
+    }
+
+    .nav-icons {
+        column-gap: 2rem;
+        margin: 0 1rem;
+    }
+
+    .sidebar.show {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+
+    .sidebar-nav {
+        margin-left: 2.5rem;
+    }
+
+    .sidebar-item {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 522px) {
+    .nav-menu, .nav-items {
+        font-size: 1.6rem;
+    }
+
+    .navigation .nav-icon-item {
+        display: none;
+    }
+
+    .sidebar .sidebar-item-actions {
+        display: flex;
+        width: 90%;
+    }
+
+    .nav-menu, .nav-items a {
+        padding: 0;
+    }
+
+    .sidebar-item {
+        font-size: 1.8rem;
+    }
+
+    .footer-header {
+        font-size: 1.8rem;
+    }
+
+    .footer-icon {
+        font-size: 2rem;
+    }
+}
