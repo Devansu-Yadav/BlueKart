@@ -1,0 +1,212 @@
+.nav-icons .btn-icon {
+    display: none;
+}
+
+.home-page-nav {
+    justify-content: space-between;
+}
+
+.searchbar-below-nav {
+    display: none;
+}
+
+/* ----------------------------------------> Hero Section <-------------------------------- */
+.hero {
+    margin: auto auto 5rem;
+    width: 85%;
+}
+
+.hero-left {
+    width: 50%;
+}
+
+.hero-info {
+    width: 90%;
+    margin: 20% auto 7rem;
+    color: var(--content-text-color);
+    text-align: center;
+}
+
+.hero-heading-small {
+    font-size: 3.8rem;
+}
+
+.hero-info .highlight-hero-heading {
+    font-size: 4.5rem;
+    color: var(--primary-color);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+}
+
+.hero-content span {
+    color: var(--primary-color);
+}
+
+.hero-info-btns {
+    column-gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-info-btns .btn {
+    font-size: 2.2rem;
+}
+
+.hero-info-btns .btn-primary {
+    padding: 1rem 4rem;
+}
+
+.hero-info-btns .btn-outline-default {
+    padding: 1rem 5rem;
+}
+
+.hero-info-btns .btn:hover {
+    filter: brightness(100%);
+}
+
+.hero-right {
+    width: 50%;
+}
+
+.hero-right img {
+    min-width: 350px;
+    min-height: 350px;
+    max-width: 70%;
+}
+
+/* ----------------------------------------> Top Offers <-------------------------------------- */
+.top-offers {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+
+.top-offers-title {
+    padding: 1rem 0;
+    margin: auto;
+    color: var(--primary-color);
+}
+
+.top-offers-heading {
+    font-size: 4.8rem;
+}
+
+.top-offers-cards-container {
+    margin: 2rem 0;
+    justify-content: space-evenly;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* ----------------------------------------> Categories Section <------------------------------ */
+.categories {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+
+.category-title {
+    padding: 1rem 0;
+    margin: auto;
+    color: var(--primary-color);
+}
+
+.categories-heading {
+    font-size: 4.8rem;
+}
+
+.category-cards-container {
+    margin: 2rem 0;
+    justify-content: space-evenly;
+    column-gap: 1rem;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.zoom {
+    transition: transform 0.5s;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.categories .card-img img {
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.categories .card-header {
+    font-size: 2.8rem;
+    transition: .5s ease;
+    opacity: 0;
+    color: var(--default-darker-color);
+}
+
+.categories .card-img:hover img {
+    opacity: 0.5;
+}
+  
+.categories .card-img:hover .card-header {
+    opacity: 1;
+}
+
+/* ----------------------------------------> Responsive CSS <-------------------------------- */
+@media only screen and (max-width: 1100px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10rem;
+    }
+
+    .hero-left, .hero-right {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 978px) {
+    .navigation .searchbar-nav {
+        display: none;
+    }
+
+    .searchbar-below-nav {
+        display: flex;
+        width: 80%;
+        margin: 0.5rem auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .home-page-nav {
+        justify-content: flex-end;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .hero-info .hero-heading-small {
+        font-size: 2.8rem;
+    }
+
+    .hero-info .highlight-hero-heading {
+        font-size: 3.3rem;
+    }
+
+    .hero-content {
+        font-size: 1.6rem;
+    }
+
+    .hero-info-btns .btn {
+        font-size: 1.6rem;
+    }
+
+    .hero-info-btns .btn-outline-default {
+        padding: 1rem 4rem;
+    }
+}
