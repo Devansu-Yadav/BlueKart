@@ -1,0 +1,197 @@
+.nav-icons .btn-icon {
+    display: none;
+}
+
+.productList-page-nav {
+    justify-content: space-between;
+}
+
+.nav-items .link-active-hover:after {
+    border-bottom: solid 3px var(--default-color);
+}
+
+/* -------------------------------------> Product List Main comps <---------------------------- */
+.product-grid-2-column {
+    display: grid;
+    grid-template-columns: 250px 4fr;
+    grid-column-gap: 4rem;
+}
+
+.product-grid-3-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 5rem;
+    row-gap: 2rem;
+}
+
+/* ================> Pricing Filter Sidebar <==================== */
+.pricing-filter-sidebar {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    background-color: var(--white-color);
+    overflow-y: auto;
+    height: calc(100vh - 2rem);
+    position: sticky;
+    top: 0;
+}
+
+.pricing-filter-sidebar-small-screen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--white-color);
+}
+
+.pricing-nav {
+    align-items: flex-start;
+    padding: 0 0 1rem;
+    margin-left: 2rem;
+}
+
+.pricing-filter-heading {
+    margin: 0.5rem 1.3rem 0.5rem;
+    color: var(--primary-color);
+    column-gap: 3rem;
+}
+
+.filter {
+    justify-content: flex-start;
+    width: 90%;
+    margin-left: 1.2rem;
+    margin-right: 0;
+    row-gap: 0.5rem;
+}
+
+.filter-heading {
+    font-size: 1.8rem;
+}
+
+.filter-heading, .filter .ulist-style-none {
+    width: 90%;
+}
+
+.filter .ulist-style-none {
+    color: var(--content-text-color);
+    font-size: 1.6rem;
+}
+
+.filter .input-label {
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.filter-options {
+    margin: 0.4rem 0;
+}
+
+.filters-slider-comp {
+    display: none;
+    font-size: 2rem;
+    color: var(--primary-color);
+    height: 100%;
+    column-gap: 2rem;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+
+/* ==================> Products comp <======================= */
+.products {
+    margin: 2rem 2rem 5rem 0;
+}
+
+.products .searchbar {
+    width: 95%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.product-cards {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.product-cards .zoom {
+    transition: transform 0.7s;
+}
+
+.product-cards .zoom:hover {
+    transform: scale(1.1);
+}
+
+.product-cards .card-badge {
+    line-height: 115%;
+}
+
+.product-cards .card-header {
+    font-size: 2rem;
+}
+
+.product-cards .card-title {
+    font-size: 1.8rem;
+    color: var(--content-text-color);
+}
+
+.product-cards .card .card-button {
+    border-radius: 1rem;
+    margin-left: 2rem;
+}
+
+.product-cards .card .card-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* --------------------------------------> Responsive CSS <---------------------------------- */
+@media only screen and (max-width: 700px) {
+    .productList-page-nav {
+        justify-content: flex-end;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .main-container .pricing-filter-sidebar {
+        display: none;
+    }
+
+    .product-grid-2-column {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid-3-column {
+        justify-items: center;
+    }
+
+    .products .searchbar {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pricing-filter-sidebar-small-screen {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        z-index: 2;
+        -webkit-transform: translateX(-90%);
+        -ms-transform: translateX(-90%);
+        transform: translateX(-90%);
+        transition: -webkit-transform 0.5s ease;
+        transition: transform 0.5s ease;
+        height: 120vh;
+    }
+
+    .pricing-filter-sidebar-small-screen .pricing-nav {
+        width: 250px;
+    }
+
+    .pricing-filter-sidebar-small-screen.filter-show {
+        -webkit-transform: translateX(-8%) translateY(-8%) scaleX(0.85) scaleY(0.85);
+        -ms-transform: translateX(-8%) translateY(-8%) scaleX(0.85) scaleY(0.85);
+        transform: translateX(-8%) translateY(-8%) scaleX(0.85) scaleY(0.85);
+    }
+
+    .filters-slider-comp {
+        display: flex;
+    }
+}

@@ -20,6 +20,10 @@ body {
     font-size: 3rem;
 }
 
+.navigation .link-active {
+    color: var(--default-color);
+}
+
 .nav-items {
     font-size: 1.8rem;
 }
