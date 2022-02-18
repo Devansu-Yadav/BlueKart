@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueKart - Home</title>
+    <link rel="stylesheet" href="https://sapphire-ui.netlify.app/css/components.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar flex-row-container shadow-md">
+        <a id="nav-logo" href="/index.html">
+            BlueKart
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+        <div class="navigation home-page-nav centered-flex-row-container">
+            <ul class="nav-items centered-flex-row-container">
+                <li class="space-S"><a href="/index.html">Home</a></li>
+                <li class="space-S"><a href="/src/productList.html">Shop Now</a></li>
+            </ul>
+
+            <div class="searchbar searchbar-nav flex-row-container">
+                <input class="input-search input-primary" type="text" placeholder="Search for products, brands and more"/>
+                <i class="fa-solid search-icon fa-magnifying-glass space-M"></i>
+            </div>
+            
+            <div class="nav-icons centered-flex-row-container">
+                <button class="btn-icon btn-icon-primary logout-btn rounded-med space-M"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
+                <a class="nav-icon-item centered-flex-col-container" href="/src/login.html">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <p>Login</p>
+                </a>
+                <a class="nav-icon-item centered-flex-col-container" href="/src/wishList.html">
+                    <i class="fa-solid fa-heart"></i>
+                    <p>WishList</p>
+                </a>
+                <a class="nav-icon-item centered-flex-col-container" href="/src/cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Cart</p>
+                </a>
+                <i class="fas fa-bars nav-menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="searchbar searchbar-below-nav flex-row-container">
+        <input class="input-search input-primary" type="text" placeholder="Search for products, brands and more"/>
+        <i class="fa-solid search-icon fa-magnifying-glass space-M"></i>
+    </div>
+
+    <div class="overlay-bg"></div>
+
+    <aside class="sidebar">
+        <nav class="sidebar-nav centered-flex-col-container">
+            <div class="sidebar-heading centered-flex-row-container">
+                <h2 class="heading-2">Your Menu</h2>
+                <i class="close-nav-menu fas fa-times"></i>
+            </div>
+            <hr class="divide-nav-items"/>
+
+            <a class="sidebar-item centered-flex-row-container space-S rounded-med" href="/index.html">
+                <i class="sidebar-icon fa-solid fa-house link-active"></i>
+                <div class="sidebar-item-txt link-active">Home</div>
+            </a>
+
+            <a class="sidebar-item centered-flex-row-container space-S rounded-med" href="/src/productList.html">
+                <i class="sidebar-icon fa-solid fa-cart-shopping"></i>
+                <div class="sidebar-item-txt">Shop Now</div>
+            </a>
+
+            <a class="sidebar-item sidebar-item-actions centered-flex-row-container space-S rounded-med" href="/src/login.html">
+                <i class="sidebar-icon fa-solid fa-arrow-right-to-bracket"></i>
+                <div class="sidebar-item-txt">Login</div>
+            </a>
+
+            <a class="sidebar-item sidebar-item-actions centered-flex-row-container space-S rounded-med" href="/src/wishList.html">
+                <i class="sidebar-icon fa-solid fa-heart"></i>
+                <div class="sidebar-item-txt">WishList</div>
+            </a>
+
+            <a class="sidebar-item sidebar-item-actions centered-flex-row-container space-S rounded-med" href="/src/cart.html">
+                <i class="sidebar-icon fa-solid fa-cart-shopping"></i>
+                <div class="sidebar-item-txt">Cart</div>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero flex-row-container">
+            <div class="hero-left">
+                <div class="hero-info space-S centered-flex-col-container">
+                    <h1 class="hero-heading-small">ONE STORE, ONE PLACE</h1>
+                    <h1 class="highlight-hero-heading">FOR EVERYTHING BLUE</h1>
+                    <p class="hero-content">
+                        Are you a <span>Blue color</span> fanatic? <span>Go Blue</span> in style with our wide range of categories
+                        specially designed to help you satisfy your 💙 for <span>Blue</span>
+                    </p>
+                    <div class="hero-info-btns centered-flex-row-container">
+                        <a href="/src/productList.html"><button class="btn btn-primary rounded-med space-S">Explore</button></a>
+                        <a href="#category"><button class="btn btn-outline-default rounded-med space-S">Categories</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-right centered-flex-row-container">
+                <img src="/assets/images/hero-svg.svg" alt="Online Shopping Hero Image"/>
+            </div>
+        </section>
+
+        <!-- Top Offers -->
+        <section class="top-offers flex-col-container">
+            <div class="top-offers-title">
+                <h1 class="top-offers-heading">Top Offers</h1>
+            </div>
+            <div class="top-offers-cards-container flex-row-container">
+                <div class="card space-S zoom">
+                    <span class="card-badge">15% OFF</span>
+                    <div class="card-img">
+                        <img src="/assets/images/electronics-sale.jpg" alt="Electronics Sale"/>
+                    </div>
+
+                    <div class="card-header">Galaxy M32</div>
+                    <div class="card-title">by Samsung</div>
+
+                    <div class="card-buttons">
+                        <button class="card-button">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                        <i class="card-icon material-icons material-icons-outlined">shopping_cart</i>
+                    </div>
+                </div>
+
+                <div class="card space-S zoom">
+                    <span class="card-badge">45% OFF</span>
+                    <div class="card-img">
+                        <img src="/assets/images/fashion-sale.jpg" alt="Fashion Sale"/>
+                    </div>
+
+                    <div class="card-header">Levis Mens T-Shirt</div>
+                    <div class="card-title">by Levis</div>
+
+                    <div class="card-buttons">
+                        <button class="card-button">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                        <i class="card-icon material-icons material-icons-outlined">shopping_cart</i>
+                    </div>
+                </div>
+
+                <div class="card space-S zoom">
+                    <span class="card-badge">7% OFF</span>
+                    <div class="card-img">
+                        <img src="/assets/images/Sports-sale.jpg" alt="Sports Sale"/>
+                    </div>
+
+                    <div class="card-header">Mens Shoes</div>
+                    <div class="card-title">by Nike</div>
+
+                    <div class="card-buttons">
+                        <button class="card-button">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                        <i class="card-icon material-icons material-icons-outlined">shopping_cart</i>
+                    </div>
+                </div>
+
+                <div class="card space-S zoom">
+                    <span class="card-badge">35% OFF</span>
+                    <div class="card-img">
+                        <img src="/assets/images/accessories-sale.jpg" alt="Accessories Sale"/>
+                    </div>
+
+                    <div class="card-header">Tint Smartwatch</div>
+                    <div class="card-title">by Daniel Klein</div>
+
+                    <div class="card-buttons">
+                        <button class="card-button">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                        <i class="card-icon material-icons material-icons-outlined">shopping_cart</i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="category" class="categories flex-col-container">
+            <div class="category-title">
+                <h1 class="categories-heading">Categories</h1>
+            </div>
+            <div class="category-cards-container flex-row-container">
+                <a href="/src/productList.html">
+                    <div class="card card-text-overlay space-S zoom">
+                        <div class="card-img">
+                            <img src="/assets/images/electronics.jpg" alt="Electronics"/>
+                            <div class="card-header">Electronics</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/src/productList.html">
+                    <div class="card card-text-overlay space-S zoom">
+                        <div class="card-img">
+                            <img src="/assets/images/fashion.jpg" alt="Fashion"/>
+                            <div class="card-header">Fashion</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/src/productList.html">
+                    <div class="card card-text-overlay space-S zoom">
+                        <div class="card-img">
+                            <img src="/assets/images/Sports.jpg" alt="Sports"/>
+                            <div class="card-header">Sports</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="/src/productList.html">
+                    <div class="card card-text-overlay space-S zoom">
+                        <div class="card-img">
+                            <img src="/assets/images/accessories.jpg" alt="Accessories"/>
+                            <div class="card-header">Accessories</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container centered-flex-col-container">
+        <p class="footer-header">Made with 
+            <span>&lt;/&gt;</span>
+            by Devansu Yadav
+        </p>
+
+        <ul class="social-icons centered-flex-row-container space-S">
+            <li class="footer-social-item">
+                <a href="https://github.com/Devansu-Yadav" target="_blank">
+                    <i class="fa-brands footer-icon fa-github"></i>
+                </a>
+            </li>
+            <li class="footer-social-item">
+                <a href="https://twitter.com/DevanshYtweets" target="_blank">
+                    <i class="fa-brands footer-icon fa-twitter"></i>
+                </a>
+            </li>
+            <li class="footer-social-item">
+                <a href="https://www.linkedin.com/in/devansu-yadav/" target="_blank">
+                    <i class="fa-brands footer-icon fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+        <p class="copyright">
+            © 2022 | Sapphire
+        </p>
+    </footer>
+    <script src="/src/js/nav-menu.js"></script>
+</body>
+</html>
