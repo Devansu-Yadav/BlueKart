@@ -1,0 +1,122 @@
+.main-container {
+    min-height: 70vh;
+}
+
+.nav-icons .btn-icon {
+    display: none;
+}
+
+.wishList-page-nav {
+    justify-content: space-between;
+}
+
+.nav-items .link-active-hover:after {
+    border-bottom: solid 3px var(--default-color);
+}
+
+/* ----------------------------------> WishList Container <----------------------------------- */
+.wishList-grid-3-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+.wishList {
+    width: 85%;
+    margin: 2rem auto;
+}
+
+.wishList-heading {
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem 0;
+    color: var(--primary-color);
+    column-gap: 2rem;
+}
+
+.wishList-heading i {
+    margin-left: 1rem;
+}
+
+.wishList-empty-container {
+    display: none;
+    width: 80%;
+    padding: 2rem;
+    row-gap: 1rem;
+    margin: auto auto 5rem;
+}
+
+.wishList-empty-heading {
+    font-size: 2.4rem;
+    color: var(--default-darker-color);
+}
+
+.wishList-empty-content {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.wishList-empty-img {
+    width: 35rem;
+    height: 35rem;
+}
+
+.wishList-cards {
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+    justify-items: center;
+}
+
+.wishList-cards .card-header {
+    font-size: 2rem;
+}
+
+.wishList-cards .card-title {
+    font-size: 1.8rem;
+    color: var(--content-text-color);
+}
+
+.wishList-cards .card-buttons {
+    justify-content: center;
+}
+
+.wishList-cards .card .card-button {
+    border-radius: 1rem;
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.wishList-cards .card .card-button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* ---------------------------------------> Responsive CSS <---------------------------------- */
+@media only screen and (max-width: 700px) {
+    .wishList-page-nav {
+        justify-content: flex-end;
+    } 
+}
+
+@media only screen and (max-width: 510px) {
+    .wishList-empty-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .wishList-empty-heading {
+        font-size: 1.8rem;
+    }
+
+    .wishList-empty-content {
+        font-size: 1.6rem;
+    }
+
+    .wishList-empty-img {
+        width: 30rem;
+        height: 30rem;
+    }
+}
