@@ -10,7 +10,7 @@
     justify-content: space-between;
 }
 
-.nav-items .link-active-hover:after {
+.nav-icons .link-active-hover:after {
     border-bottom: solid 3px var(--default-color);
 }
 
