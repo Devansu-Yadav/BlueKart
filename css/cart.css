@@ -53,6 +53,10 @@
     color: var(--default-darker-color);
 }
 
+.cart-empty-redirect-link {
+    color: var(--primary-color);
+}
+
 .cart-empty-content {
     font-size: 2rem;
     text-align: center;
@@ -217,5 +221,10 @@
 
     .cart-card-details .card-button {
         font-size: 1.4rem;
+    }
+
+    .cart-empty-img {
+        width: 30rem;
+        height: 30rem;
     }
 }
