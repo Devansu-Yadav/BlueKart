@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueKart - Products</title>
+    <link rel="stylesheet" href="https://sapphire-ui.netlify.app/css/components.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/productList.css">
+    <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar flex-row-container shadow-md">
+        <a id="nav-logo" href="/index.html">
+            BlueKart
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+        <div class="navigation productList-page-nav centered-flex-row-container">
+            <ul class="nav-items centered-flex-row-container">
+                <li class="space-S"><a href="/index.html">Home</a></li>
+                <li class="link-active-hover space-S"><a class="link-active" href="/src/productList.html">Shop Now</a></li>
+            </ul>
+            
+            <div class="nav-icons centered-flex-row-container">
+                <button class="btn-icon btn-icon-primary logout-btn rounded-med space-M"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
+                <a class="nav-icon-item centered-flex-col-container" href="/src/login.html">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <p>Login</p>
+                </a>
+                <a class="nav-icon-item centered-flex-col-container" href="/src/wishList.html">
+                    <i class="fa-solid fa-heart"></i>
+                    <p>WishList</p>
+                </a>
+                <a class="nav-icon-item centered-flex-col-container" href="/src/cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Cart</p>
+                </a>
+                <i class="fas fa-bars nav-menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="overlay-bg"></div>
+
+    <aside class="sidebar">
+        <nav class="sidebar-nav centered-flex-col-container">
+            <div class="sidebar-heading centered-flex-row-container">
+                <h2 class="heading-2">Your Menu</h2>
+                <i class="close-nav-menu fas fa-times"></i>
+            </div>
+            <hr class="divide-nav-items"/>
+
+            <a class="sidebar-item centered-flex-row-container space-S rounded-med" href="/index.html">
+                <i class="sidebar-icon fa-solid fa-house link-active"></i>
+                <div class="sidebar-item-txt link-active">Home</div>
+            </a>
+
+            <a class="sidebar-item centered-flex-row-container space-S rounded-med" href="/src/productList.html">
+                <i class="sidebar-icon fa-solid fa-cart-shopping"></i>
+                <div class="sidebar-item-txt">Shop Now</div>
+            </a>
+
+            <a class="sidebar-item sidebar-item-actions centered-flex-row-container space-S rounded-med" href="/src/login.html">
+                <i class="sidebar-icon fa-solid fa-arrow-right-to-bracket"></i>
+                <div class="sidebar-item-txt">Login</div>
+            </a>
+
+            <a class="sidebar-item sidebar-item-actions centered-flex-row-container space-S rounded-med" href="/src/wishList.html">
+                <i class="sidebar-icon fa-solid fa-heart"></i>
+                <div class="sidebar-item-txt">WishList</div>
+            </a>
+
+            <a class="sidebar-item sidebar-item-actions centered-flex-row-container space-S rounded-med" href="/src/cart.html">
+                <i class="sidebar-icon fa-solid fa-cart-shopping"></i>
+                <div class="sidebar-item-txt">Cart</div>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Toggling Pricing Filter on Smaller screens -->
+    <aside class="pricing-filter-sidebar-small-screen">
+        <nav class="pricing-nav centered-flex-col-container">
+            <div class="pricing-filter-heading centered-flex-row-container">
+                <h3 class="heading-3">FILTERS</h3>
+                <button class="btn-link btn-link-primary space-S">CLEAR</button>
+            </div>
+            
+            <hr class="divide-nav-items"/>
+
+            <!-- Price filter -->
+            <div class="filter flex-col-container space-S">
+                <div class="filter-heading">PRICE</div>
+
+                <ul class="ulist-style-none">
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="price" type="radio">
+                                Under ₹999
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="price" type="radio">
+                                ₹1000 to ₹5999
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="price" type="radio">
+                                ₹6000 to ₹9,999   
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="price" type="radio">
+                                More than ₹10,000
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="divide-nav-items"/>
+
+            <!-- Category Filter -->
+            <div class="filter flex-col-container space-S">
+                <div class="filter-heading">CATEGORY</div>
+
+                <ul class="ulist-style-none">
+                    <li class="filter-options">
+                        <div class="checkbox">
+                            <label class="input-label flex-row-container" for="input-checkbox">
+                                <input class="input-checkbox" name="electronics category" type="checkbox">
+                                Electronics 
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="checkbox">
+                            <label class="input-label flex-row-container" for="input-checkbox">
+                                <input class="input-checkbox" name="fashion category" type="checkbox">
+                                Fashion
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="checkbox">
+                            <label class="input-label flex-row-container" for="input-checkbox">
+                                <input class="input-checkbox" name="sports category" type="checkbox">
+                                Sports 
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="checkbox">
+                            <label class="input-label flex-row-container" for="input-checkbox">
+                                <input class="input-checkbox" name="accessories category" type="checkbox">
+                                Accessories 
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="divide-nav-items"/>
+
+            <!-- Ratings Filter -->
+            <div class="filter flex-col-container space-S">
+                <div class="filter-heading">RATING</div>
+
+                <ul class="ulist-style-none">
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="rating" type="radio">
+                                4 Stars & Above
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="rating" type="radio">
+                                3 Stars & Above
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="rating" type="radio">
+                                2 Stars & Above  
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="rating" type="radio">
+                                1 Star & Above  
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="divide-nav-items"/>
+
+            <!-- Sort By Filter -->
+            <div class="filter flex-col-container space-S">
+                <div class="filter-heading">SORT BY</div>
+
+                <ul class="ulist-style-none">
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="rating" type="radio">
+                                Price - High to Low
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="rating" type="radio">
+                                Price - Low to High
+                            </label>
+                        </div>
+                    </li>
+                    <li class="filter-options">
+                        <div class="radio">
+                            <label class="input-label flex-row-container" for="input-radio">
+                                <input class="input-radio" name="rating" type="radio">
+                                Rating - High to Low
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="filters-slider-comp centered-flex-row-container">
+            FILTERS
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+    </aside>
+
+    <main class="main-container product-grid-2-column">
+        <!-- Pricing Filters Sidebar -->
+        <aside class="pricing-filter-sidebar">
+            <nav class="pricing-nav centered-flex-col-container">
+                <div class="pricing-filter-heading centered-flex-row-container">
+                    <h3 class="heading-3">FILTERS</h3>
+                    <button class="btn-link btn-link-primary space-S">CLEAR</button>
+                </div>
+                
+                <hr class="divide-nav-items"/>
+
+                <!-- Price filter -->
+                <div class="filter flex-col-container space-S">
+                    <div class="filter-heading">PRICE</div>
+
+                    <ul class="ulist-style-none">
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="price" type="radio">
+                                    Under ₹999
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="price" type="radio">
+                                    ₹1000 to ₹5999
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="price" type="radio">
+                                    ₹6000 to ₹9,999   
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="price" type="radio">
+                                    More than ₹10,000
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="divide-nav-items"/>
+
+                <!-- Category Filter -->
+                <div class="filter flex-col-container space-S">
+                    <div class="filter-heading">CATEGORY</div>
+
+                    <ul class="ulist-style-none">
+                        <li class="filter-options">
+                            <div class="checkbox">
+                                <label class="input-label flex-row-container" for="input-checkbox">
+                                    <input class="input-checkbox" name="electronics category" type="checkbox">
+                                    Electronics 
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="checkbox">
+                                <label class="input-label flex-row-container" for="input-checkbox">
+                                    <input class="input-checkbox" name="fashion category" type="checkbox">
+                                    Fashion
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="checkbox">
+                                <label class="input-label flex-row-container" for="input-checkbox">
+                                    <input class="input-checkbox" name="sports category" type="checkbox">
+                                    Sports 
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="checkbox">
+                                <label class="input-label flex-row-container" for="input-checkbox">
+                                    <input class="input-checkbox" name="accessories category" type="checkbox">
+                                    Accessories 
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="divide-nav-items"/>
+
+                <!-- Ratings Filter -->
+                <div class="filter flex-col-container space-S">
+                    <div class="filter-heading">RATING</div>
+
+                    <ul class="ulist-style-none">
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="rating" type="radio">
+                                    4 Stars & Above
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="rating" type="radio">
+                                    3 Stars & Above
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="rating" type="radio">
+                                    2 Stars & Above  
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="rating" type="radio">
+                                    1 Star & Above  
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr class="divide-nav-items"/>
+
+                <!-- Sort By Filter -->
+                <div class="filter flex-col-container space-S">
+                    <div class="filter-heading">SORT BY</div>
+
+                    <ul class="ulist-style-none">
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="rating" type="radio">
+                                    Price - High to Low
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="rating" type="radio">
+                                    Price - Low to High
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-options">
+                            <div class="radio">
+                                <label class="input-label flex-row-container" for="input-radio">
+                                    <input class="input-radio" name="rating" type="radio">
+                                    Rating - High to Low
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Products Container -->
+        <div class="products">
+            <div class="searchbar searchbar-in-products-list flex-row-container">
+                <input class="input-search input-primary" type="text" placeholder="Search for products, brands and more"/>
+                <i class="fa-solid search-icon fa-magnifying-glass space-M"></i>
+            </div>
+
+            <div class="product-cards product-grid-3-column">
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.8/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/laptop.jpg" alt="Surface Laptop"/>
+                    </div>
+                    <div class="card-header">Surface Pro 8</div>
+                    <div class="card-title">₹1,00,000</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.5/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/smartphone.jpg" alt="Smartphone"/>
+                    </div>
+                    <div class="card-header">Samsung Galaxy M32</div>
+                    <div class="card-title">₹30,999</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.2/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/tablet.jpg" alt="Tablet"/>
+                    </div>
+                    <div class="card-header">Samsung Tablet</div>
+                    <div class="card-title">₹6,999</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.6/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/fashion-men.jpg" alt="Fashion Men"/>
+                    </div>
+                    <div class="card-header">Mens Sherwani</div>
+                    <div class="card-title">₹9,999</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.6/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/fashion-women.jpg" alt="Fashion Women"/>
+                    </div>
+                    <div class="card-header">Women's T-Shirt</div>
+                    <div class="card-title">₹1,599</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.1/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/fashion-3.jpg" alt="Men's Jacket"/>
+                    </div>
+                    <div class="card-header">Men's jacket</div>
+                    <div class="card-title">₹1,599</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.0/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/Sports-1.jpg" alt="Sports shoes"/>
+                    </div>
+                    <div class="card-header">Nike Sports Shoes</div>
+                    <div class="card-title">₹5,099</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.5/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/Sports-2.jpg" alt="Men's Sports wear"/>
+                    </div>
+                    <div class="card-header">HRX Men's Sports Wear</div>
+                    <div class="card-title">₹2,199</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.6/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/Sports-3.jpg" alt="Sports T-Shirt"/>
+                    </div>
+                    <div class="card-header">Men's Sports T-Shirt</div>
+                    <div class="card-title">₹2,199</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.6/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/accessories-1.jpg" alt="Headphones"/>
+                    </div>
+                    <div class="card-header">Boat Wireless Headphones</div>
+                    <div class="card-title">₹3,299</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.0/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/accessories-2.jpg" alt="SmartWatch"/>
+                    </div>
+                    <div class="card-header">SmartWatch</div>
+                    <div class="card-title">₹2,299</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+    
+                <div class="card space-S zoom">
+                    <span class="card-badge">⭐ 4.3/5</span>
+                    <div class="card-img">
+                        <img src="/assets/images/products/accessories-3.jpg" alt="Trimmer"/>
+                    </div>
+                    <div class="card-header">Phillips Men's Trimmer</div>
+                    <div class="card-title">₹2,599</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+        
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">ADD TO CART</button>
+                        <i class="card-icon material-icons material-icons-outlined">favorite_border</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-container centered-flex-col-container">
+        <p class="footer-header">Made with 
+            <span>&lt;/&gt;</span>
+            by Devansu Yadav
+        </p>
+
+        <ul class="social-icons centered-flex-row-container space-S">
+            <li class="footer-social-item">
+                <a href="https://github.com/Devansu-Yadav" target="_blank">
+                    <i class="fa-brands footer-icon fa-github"></i>
+                </a>
+            </li>
+            <li class="footer-social-item">
+                <a href="https://twitter.com/DevanshYtweets" target="_blank">
+                    <i class="fa-brands footer-icon fa-twitter"></i>
+                </a>
+            </li>
+            <li class="footer-social-item">
+                <a href="https://www.linkedin.com/in/devansu-yadav/" target="_blank">
+                    <i class="fa-brands footer-icon fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+        <p class="copyright">
+            © 2022 | Sapphire
+        </p>
+    </footer>
+    <script src="/src/js/nav-menu.js"></script>
+    <script src="/src/js/product-page-drawer.js"></script>
+</body>
+</html>
