@@ -10,6 +10,10 @@
     display: none;
 }
 
+.nav-items .link-active-hover:after {
+    border-bottom: solid 3px var(--default-color);
+}
+
 /* ----------------------------------------> Hero Section <-------------------------------- */
 .hero {
     margin: auto auto 5rem;

@@ -2,6 +2,15 @@
     justify-content: space-between;
 }
 
+.link-active:hover {
+    color: var(--default-color);
+}
+
+.nav-icons .link-active-hover:after {
+    border-bottom: solid 3px var(--default-color);
+}
+
+/* --------------------------------------> Login Form Container <---------------------------- */
 .form-container {
     width: 40rem;
     height: fit-content;
