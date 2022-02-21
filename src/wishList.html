@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueKart - WishList</title>
+    <link rel="stylesheet" href="https://sapphire-ui.netlify.app/css/components.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/wishList.css">
+    <link rel="stylesheet" href="/css/colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar flex-row-container shadow-md">
+        <a id="nav-logo" href="/index.html">
+            BlueKart
+            <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+
+        <div class="navigation wishList-page-nav centered-flex-row-container">
+            <ul class="nav-items centered-flex-row-container">
+                <li class="space-S"><a href="/index.html">Home</a></li>
+                <li class="space-S"><a href="./productList.html">Shop Now</a></li>
+            </ul>
+            
+            <div class="nav-icons centered-flex-row-container">
+                <a class="nav-icon-item centered-flex-col-container" href="./login.html">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <p>Login</p>
+                </a>
+                <a class="nav-icon-item centered-flex-col-container link-active" href="./wishList.html">
+                    <i class="fa-solid fa-heart"></i>
+                    <p class="link-active-hover">WishList</p>
+                </a>
+                <a class="nav-icon-item centered-flex-col-container" href="./cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Cart</p>
+                </a>
+                <i class="fas fa-bars nav-menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="overlay-bg"></div>
+
+    <aside class="sidebar">
+        <nav class="sidebar-nav centered-flex-col-container">
+            <div class="sidebar-heading centered-flex-row-container">
+                <h2 class="heading-2">Your Menu</h2>
+                <i class="close-nav-menu fas fa-times"></i>
+            </div>
+            <hr class="divide-nav-items"/>
+
+            <a class="sidebar-item centered-flex-row-container space-S rounded-med" href="/index.html">
+                <i class="sidebar-icon fa-solid fa-house"></i>
+                <div class="sidebar-item-txt">Home</div>
+            </a>
+
+            <a class="sidebar-item centered-flex-row-container space-S rounded-med" href="./productList.html">
+                <i class="sidebar-icon fa-solid fa-cart-shopping"></i>
+                <div class="sidebar-item-txt">Shop Now</div>
+            </a>
+
+            <a class="sidebar-item sidebar-item-actions centered-flex-row-container space-S rounded-med" href="./login.html">
+                <i class="sidebar-icon fa-solid fa-arrow-right-to-bracket"></i>
+                <div class="sidebar-item-txt">Login</div>
+            </a>
+
+            <a class="sidebar-item sidebar-item-actions centered-flex-row-container space-S rounded-med" href="/src/wishList.html">
+                <i class="sidebar-icon fa-solid fa-heart link-active"></i>
+                <div class="sidebar-item-txt link-active">WishList</div>
+            </a>
+
+            <a class="sidebar-item sidebar-item-actions centered-flex-row-container space-S rounded-med" href="/src/cart.html">
+                <i class="sidebar-icon fa-solid fa-cart-shopping"></i>
+                <div class="sidebar-item-txt">Cart</div>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-container">
+        <!-- WishList Container -->
+        <div class="wishList">
+            <div class="wishList-heading centered-flex-row-container">
+                <h1 class="heading-1">
+                    My WishList
+                    <i class="fa-solid fa-heart"></i>
+                </h1>
+            </div>
+
+            <!-- Empty WishList Div -->
+            <div class="wishList-empty-container centered-flex-col-container">
+                <h3 class="wishList-empty-heading">Your WishList is Empty</h3>
+                <p class="wishList-empty-content">
+                    Add items you like to your wishlist. Review them anytime and 
+                    easily move them to your cart.
+                </p>
+                <img class="wishList-empty-img" src="/assets/images/wishlist.svg" alt="Add to WishList"/>
+                <button class="btn btn-outline-primary rounded-med">BUY NOW</button>
+            </div>
+
+            <!-- WishList Cards -->
+            <div class="wishList-cards wishList-grid-3-column">
+                <div class="card space-S zoom">
+                    <div class="card-img">
+                        <img src="/assets/images/products/smartphone.jpg" alt="Smartphone"/>
+                    </div>
+                    <img class="btn-close" src="/assets/images/close-button.svg" alt="Close Button"/>
+                    <div class="card-header">Samsung Galaxy M32</div>
+                    <div class="card-title">₹30,999</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">MOVE TO CART</button>
+                    </div>
+                </div>
+
+                <div class="card space-S zoom">
+                    <div class="card-img">
+                        <img src="/assets/images/products/laptop.jpg" alt="Surface Laptop"/>
+                    </div>
+                    <img class="btn-close" src="/assets/images/close-button.svg" alt="Close Button"/>
+                    <div class="card-header">Surface Pro 8</div>
+                    <div class="card-title">₹1,00,000</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">MOVE TO CART</button>
+                    </div>
+                </div>
+
+                <div class="card space-S zoom">
+                    <div class="card-img">
+                        <img src="/assets/images/products/fashion-men.jpg" alt="Fashion Men"/>
+                    </div>
+                    <img class="btn-close" src="/assets/images/close-button.svg" alt="Close Button"/>
+                    <div class="card-header">Mens Sherwani</div>
+                    <div class="card-title">₹9,999</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">MOVE TO CART</button>
+                    </div>
+                </div>
+
+                <div class="card space-S zoom">
+                    <div class="card-img">
+                        <img src="/assets/images/products/fashion-3.jpg" alt="Men's Jacket"/>
+                    </div>
+                    <img class="btn-close" src="/assets/images/close-button.svg" alt="Close Button"/>
+                    <div class="card-header">Men's jacket</div>
+                    <div class="card-title">₹1,599</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">MOVE TO CART</button>
+                    </div>
+                </div>
+
+                <div class="card space-S zoom">
+                    <div class="card-img">
+                        <img src="/assets/images/Sports-sale.jpg" alt="Sports Shoes"/>
+                    </div>
+                    <img class="btn-close" src="/assets/images/close-button.svg" alt="Close Button"/>
+                    <div class="card-header">Nike Sports Shoes</div>
+                    <div class="card-title">₹5,099</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">MOVE TO CART</button>
+                    </div>
+                </div>
+
+                <div class="card space-S zoom">
+                    <div class="card-img">
+                        <img src="/assets/images/accessories.jpg" alt="Headphones"/>
+                    </div>
+                    <img class="btn-close" src="/assets/images/close-button.svg" alt="Close Button"/>
+                    <div class="card-header">Boat Headphones</div>
+                    <div class="card-title">₹3,299</div>
+                    <p class="card-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio enim optio
+                    </p>
+
+                    <div class="card-buttons">
+                        <button class="card-button btn-outline-primary">MOVE TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-container centered-flex-col-container">
+        <p class="footer-header">Made with 
+            <span>&lt;/&gt;</span>
+            by Devansu Yadav
+        </p>
+
+        <ul class="social-icons centered-flex-row-container space-S">
+            <li class="footer-social-item">
+                <a href="https://github.com/Devansu-Yadav" target="_blank">
+                    <i class="fa-brands footer-icon fa-github"></i>
+                </a>
+            </li>
+            <li class="footer-social-item">
+                <a href="https://twitter.com/DevanshYtweets" target="_blank">
+                    <i class="fa-brands footer-icon fa-twitter"></i>
+                </a>
+            </li>
+            <li class="footer-social-item">
+                <a href="https://www.linkedin.com/in/devansu-yadav/" target="_blank">
+                    <i class="fa-brands footer-icon fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+        <p class="copyright">
+            © 2022 | Sapphire
+        </p>
+    </footer>
+    <script src="./js/nav-menu.js"></script>
+    <script src="./js/empty-wishList-msg.js"></script>
+</body>
+</html>
