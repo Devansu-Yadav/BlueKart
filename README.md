@@ -19,4 +19,4 @@ Direct live links to all the screens are provided below separately and can also 
 
 ## Demo
 
-
+![Demo](https://github.com/Devansu-Yadav/BlueKart/blob/documentationDemoVideos/assets/images/BlueKart%20demo.gif)
