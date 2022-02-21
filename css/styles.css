@@ -138,8 +138,8 @@ body {
     -webkit-transform: translateX(100%);
     -ms-transform: translateX(100%);
     transform: translateX(100%);
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .overlay {
@@ -157,7 +157,7 @@ body {
     bottom: 0;
     z-index: 3;
     background-color: var(--white-color);
-    transition: background-color 0.4s ease;
+    transition: background-color 0.2s ease;
 }
 
 .sidebar-nav {
